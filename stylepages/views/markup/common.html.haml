@@ -1,0 +1,33 @@
+- @title = "Common Markup"
+- @subnav = "<nav class='section-nav'></nav> "
+
+/ Common HTML Elements
+%section#common.element-group
+  %h1.section-title Common Elements
+  = render :template => "/partials/common/_headers.haml"
+  = render :template => "/partials/common/_characters.haml"
+  = render :template => "/partials/common/_paragraphs.haml"
+  = render :template => "/partials/common/_links.haml"
+  = render :template => "/partials/common/_lists.haml"
+  = render :template => "/partials/common/_pre.haml"
+/ Phrase-level HTML Elements
+%section#phrase-elements.element-group
+  %h1.section-title Phrase Elements
+  = render :template => "/partials/common/_em.haml"
+  = render :template => "/partials/common/_strong.haml"
+  = render :template => "/partials/common/_cite.haml"
+  = render :template => "/partials/common/_dfn.haml"
+  = render :template => "/partials/common/_code.haml"
+  = render :template => "/partials/common/_samp.haml"
+  = render :template => "/partials/common/_kbd.haml"
+  = render :template => "/partials/common/_var.haml"
+  = render :template => "/partials/common/_abbr.haml"
+  = render :template => "/partials/common/_acronym.haml"
+  = render :template => "/partials/common/_q.haml"
+  = render :template => "/partials/common/_others.haml"
+/ Simple markup Patterns
+%section#simple-patterns.element-group
+  %h1.section-title Common Patterns
+  = render :template => "/partials/common/_inline-images.haml"
+  = render :template => "/partials/common/_tables.haml"
+  = render :template => "/partials/common/_forms.haml"
