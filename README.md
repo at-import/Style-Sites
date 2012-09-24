@@ -12,7 +12,7 @@ gem install serve haml compass sass toolkit compass-normalize sassy-buttons
 Once you have all of that install, `cd` into your fork from the command line (so something like `cd /path/to/project/stylepages`) and, in the stylepages directory, type `serve` to start the Serve webserver. You'll be able to access your Style Guide by going to `localhost:4000` from your browser.
 
 ## Usage
-Pretty easy. Edit the variables inside of the `setup/*.haml` files to corispond to your clients/needs, compile your Sass as needed, and you're good to go! You should never really need to dive into or edit anything in the `views` directory unless you are adding new pages that don't already exist or really need to edit those that do.
+Pretty easy. Edit the variables inside of the `setup/*.haml` and `setup/*.scss` files to corispond to your client's needs, write your style guide in `style-guide` being sure to include all partials in the provided file, run `serve` at the stylepages root, and you're good to go! You should never really need to dive into or edit anything in the `views` directory unless you are adding new pages that don't already exist or really need to edit those that do.
 
 Have fun!
 
