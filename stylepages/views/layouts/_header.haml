@@ -1,14 +1,16 @@
 %header
-  %hgroup.client-id
+  %hgroup#client-id
     -if not @clientLogo and @clientName
       %h1.client-name
         #{@clientName}
     -if @clientLogo
       %img{:src => "#{@clientLogo}", :alt => "#{@clientName}"}
+    %h4.author-name
+      #{@author}
+  %aside#page-id
     %h2.section-name #{@title}
-    %aside
-      #{@client}
-      #{@title}
+    .page-info
+      #{@clientName} #{@title}
       -if @version
         %br/
         Version #{@version}

@@ -56,12 +56,18 @@
       =render :template => "_webfonts"
       
   %body
-    #page
-      =render :template => "_header.haml"
-      =render :template => "_nav.haml"
-      #main{ :role => "main" }
+    #header.page-wrapper
+      .content-wrapper
+        =render :template => "_header.haml"
+    #nav.page-wrapper
+      .content-wrapper
+        =render :template => "_nav.haml"
+    #main.page-wrapper{ :role => "main" }
+      .content-wrapper
         = yield
-      %footer
+    #footer.page-wrapper
+      .content-wrapper
+        %footer
 
     /
       Javascript at the bottom for fast page loading
