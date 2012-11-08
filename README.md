@@ -6,7 +6,7 @@ The goal of this project is to grow into a full style guide generation app for d
 Style pages, for the time being, require [Serve](http://get-serve.com) to run. It makes is really super easy to deal with. In addition to Serve, there are a handful of other gems you're going to need to install. The following line should install everything for you (from the command line):
 
 ```
-gem install serve haml compass sass toolkit compass-normalize sassy-buttons
+gem install serve haml compass sass bundler toolkit compass-normalize sassy-buttons
 ```
 
 Once you have all of that installed, `cd` into your fork from the command line (so something like `cd /path/to/project/stylepages`) and, in the stylepages directory, type `serve` to start the Serve webserver. You'll be able to access your Style Guide by going to `localhost:4000` from your browser.
