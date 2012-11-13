@@ -1,0 +1,13 @@
+//////////////////////////////
+// Import Style Guide's Globals
+//////////////////////////////
+@import "../style-guide/global/base";
+
+//////////////////////////////
+// Import Color Guide Helper Mixins and Functions
+//////////////////////////////
+@import "../_server/sass/color/functions";
+@import "../_server/sass/color/mixins";
+
+// Example generation of the colour guide. Replace with your colours
+@include generate-colour-guide($black, $red, $orange, $yellow, $green, $blue, $purple, $badass);
