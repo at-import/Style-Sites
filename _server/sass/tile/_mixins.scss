@@ -1,0 +1,18 @@
+@mixin possible-colours($colours...) {
+  @debug $colours;
+  @if length($colours) == 1 and type-of(nth($colours, 1)) == 'list' {
+    $colours: nth($colours, 1);
+  }
+
+  $i: 1;
+  @each $colour in $colours {
+    .colors li:nth-child(#{$i}) {
+      background-color: $colour;
+    }
+    $i: $i + 1;
+  }
+}
+
+@mixin possible-colors($colors...) {
+  @include possible-colours($colors);
+}

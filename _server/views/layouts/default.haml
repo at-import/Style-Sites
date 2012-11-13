@@ -1,0 +1,96 @@
+!!! 5
+-# paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/
+<!--[if lt IE 7]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if gt IE 8]><!-->
+%html.no-js{ :lang => "en" }
+  <!--<![endif]-->
+  %head
+    %meta{ :charset => "utf-8" }/
+
+    %title= "#{@title} | #{@clientName} Style Guide"
+    %meta{ :name => "description", :content => "#{@title} | #{@clientName} Style Guide" }/
+    %meta{ :name => "author", :content => "#{@author}" }/
+
+    / Mobile viewport optimized: j.mp/bplateviewport
+    %meta{ :name => "HandheldFriendly", :content => "True" }/
+    %meta{ :name => "MobileOptimized", :content => "320" }/
+    %meta{ :name => "viewport", :content => "width=device-width, target-densitydpi=160, initial-scale=1.0" }/
+
+    -# Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons
+    / For iPhone 4 with high-resolution Retina display:
+    %link{:href => "/apple-touch-icon-114x114-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "114x114"}
+    / For first-generation iPad:
+    %link{:href => "/apple-touch-icon-72x72-precomposed.png", :rel => "apple-touch-icon-precomposed", :sizes => "72x72"}
+    / For non-Retina iPhone, iPod Touch, and Android 2.1+ devices:
+    %link{:href => "/apple-touch-icon-precomposed.png", :rel => "apple-touch-icon-precomposed"}/
+    / For Nokia
+    %link{:href => "/apple-touch-icon.png", :rel => "shortcut icon"}
+    / For everything else
+    %link{:href => "/favicon.ico", :rel => "shortcut icon"}
+
+    / iOS. Delete if not required
+    %meta{:content => "yes", :name => "apple-mobile-web-app-capable"}
+    %meta{:content => "black-translucent", :name => "apple-mobile-web-app-status-bar-style"}
+    %link{:href => "splash.png", :rel => "apple-touch-startup-image"}
+
+    / Microsoft. Delete if not required
+    %meta{:content => "on", "http-equiv" => "cleartype"}
+    %meta{:content => "IE=edge,chrome=1", "http-equiv" => "X-UA-Compatible"}
+    /[if lt IE 9 ] <script src="//ajax.googleapis.com/ajax/libs/chrome-frame/1.0.2/CFInstall.min.js"></script><script>window.attachEvent("onload",function(){CFInstall.check({mode:"overlay"})})</script>
+
+    / CSS
+    -# CSS: implied media="all"
+    %link{ :href => "/css/style.css?v=1", :rel => "stylesheet" }
+    -# = stylesheet_link_tag("/css/style.css")
+
+    / All JavaScript at the bottom, except for Modernizr and Respond.
+    /[if (lt IE 9) & (!IEMobile)]
+      <script src="/js/libs/selectivizr-min.js"></script>
+    -# Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+    %script{ :src => "/js/libs/modernizr-2.0.min.js" }
+
+    -# Typekit Kit Rendering
+    - if @typekitID or @googleFonts
+      =render :template => "_webfonts"
+
+  %body
+    #header.page-wrapper
+      .content-wrapper
+	=render :template => "_header.haml"
+    #nav.page-wrapper
+      .content-wrapper
+	=render :template => "_nav.haml"
+    #main.page-wrapper{ :role => "main" }
+      .content-wrapper
+	= yield
+    #footer.page-wrapper
+      .content-wrapper
+	%footer
+
+    /
+      Javascript at the bottom for fast page loading
+      Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary
+    - if @jQuery or @jQueryUI or @MooTools or @Prototype or @Dojo
+      =render :template => "_frameworks"
+
+    %script{ :src => "/js/libs/plugins.js?v=1" }
+    %script{ :src => "/js/script.js?v=1" }
+    %script{ :src => "/js/libs/320-up/helper.js?v=1" }
+
+    /[if (lt IE 9) & (!IEMobile)]
+      <script src="/js/libs/imgsizer.js"></script>
+
+    :javascript
+      // iOS scale bug fix
+      MBP.scaleFix();
+
+    -if @GoogleAnalytics
+      /  asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
+      /  change the UA-XXXXX-X to be your site's ID
+      :javascript
+	var _gaq=[["_setAccount","UA-#{@GoogleAnalytics}"],["_trackPageview"],["_trackPageLoadTime"]];
+	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+	g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+	s.parentNode.insertBefore(g,s)}(document,"script"));

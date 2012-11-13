@@ -1,0 +1,13 @@
+%header
+  %hgroup#client-id
+    %h1.client-name
+      #{@clientName}
+    %h4.author-name
+      #{@author}
+  %aside#page-id
+    %h2.section-name #{@title}
+    .page-info
+      #{@clientName} #{@title}
+      -if @version
+	%br/
+	Version #{@version}
