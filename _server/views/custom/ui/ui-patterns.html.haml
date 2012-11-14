@@ -1,0 +1,16 @@
+= render :template => "../../../../style-tile/tile.haml"
+- @title = "UI Patterns"
+- @subnav = "<nav class='section-nav'></nav> "
+
+
+%section#simple-patterns.element-group
+  %h1.section-title Common Patterns
+  = render :template => "/custom/drupal/patterns/_messages.haml"
+  = render :template => "/custom/drupal/patterns/_pager.haml"
+
+%section#buttons.element-group
+  %h1.section-title Buttons!
+  - @buttons.each_with_index do |button, i|
+    %li
+      %a{:class => button, :href => '#'}
+        Button #{i}
