@@ -24,15 +24,15 @@
     %h2 Possible Colors
     %ul
       - (1..@colours).each do |c|
-	%li{:class => "color-#{c}"}
+        %li{:class => "color-#{c}"}
   .images.group
     %h2 Possible Patterns
     %ul
       - @images.each_with_index do |image, i|
-	%li{:class => "pattern-#{i + 1}"}
-	  %img{:alt => "Pattern #{i + 1}", :src => "#{image}"}
+        %li{:class => "pattern-#{i + 1}"}
+          %img{:alt => "Pattern #{i + 1}", :src => "#{image}"}
   .inspiration.group
     %ul
       - @words.each_with_index do |word, i|
-	%li{:class => "word-#{i + 1}"}
-	  #{word}
+        %li{:class => "word-#{i + 1}"}
+          #{word}

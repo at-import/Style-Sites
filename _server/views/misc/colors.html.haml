@@ -7,4 +7,4 @@
   %ul
     - @colors.each do |c|
       - (1..@colorShades).each do |i|
-	%li{:data => {:sass => "nth($#{c}, #{i})"}}
+        %li{:data => {:sass => "nth($#{c}, #{i})"}}

@@ -4,7 +4,7 @@
 # views pristine.
 #
 module ViewHelpers
-
+  
   # Calculate the years for a copyright
   def copyright_years(start_year)
     end_year = Date.today.year
@@ -14,12 +14,12 @@ module ViewHelpers
       "\#{start_year}&#8211;\#{end_year}"
     end
   end
-
+  
   # Handy for hiding a block of unfinished code
   def hidden(&block)
     #no-op
   end
-
+  
   # Add your own helpers below...
-
+  
 end

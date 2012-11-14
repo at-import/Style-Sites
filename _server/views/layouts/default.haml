@@ -54,20 +54,20 @@
     -# Typekit Kit Rendering
     - if @typekitID or @googleFonts
       =render :template => "_webfonts"
-
+      
   %body
     #header.page-wrapper
       .content-wrapper
-	=render :template => "_header.haml"
+        =render :template => "_header.haml"
     #nav.page-wrapper
       .content-wrapper
-	=render :template => "_nav.haml"
+        =render :template => "_nav.haml"
     #main.page-wrapper{ :role => "main" }
       .content-wrapper
-	= yield
+        = yield
     #footer.page-wrapper
       .content-wrapper
-	%footer
+        %footer
 
     /
       Javascript at the bottom for fast page loading
@@ -85,12 +85,12 @@
     :javascript
       // iOS scale bug fix
       MBP.scaleFix();
-
+    
     -if @GoogleAnalytics
       /  asynchronous google analytics: mathiasbynens.be/notes/async-analytics-snippet
       /  change the UA-XXXXX-X to be your site's ID
       :javascript
-	var _gaq=[["_setAccount","UA-#{@GoogleAnalytics}"],["_trackPageview"],["_trackPageLoadTime"]];
-	(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
-	g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
-	s.parentNode.insertBefore(g,s)}(document,"script"));
+        var _gaq=[["_setAccount","UA-#{@GoogleAnalytics}"],["_trackPageview"],["_trackPageLoadTime"]];
+        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+        g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+        s.parentNode.insertBefore(g,s)}(document,"script"));

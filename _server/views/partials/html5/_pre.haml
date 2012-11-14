@@ -15,34 +15,34 @@
       constructor:
     %pre
       %code
-	:preserve
-	  function Panel(element, canClose, closeHandler) {
-			this.element = element;
-			this.canClose = canClose;
-			this.closeHandler = function () { if (closeHandler) closeHandler() };
-		      }    .markup
+        :preserve
+          function Panel(element, canClose, closeHandler) {
+                        this.element = element;
+                        this.canClose = canClose;
+                        this.closeHandler = function () { if (closeHandler) closeHandler() };
+                      }    .markup
     %pre
       %samp
-	You are in an open field west of a big white house with a boarded
-	front door.
-	There is a small mailbox here.
+        You are in an open field west of a big white house with a boarded
+        front door.
+        There is a small mailbox here.
 
-	>
+        >
       %kbd open mailbox
       %samp
-	Opening the mailbox reveals:
-	A leaflet.
+        Opening the mailbox reveals:
+        A leaflet.
 
-	>
+        >
   .markup
     %pre
 
       :preserve
-	  _____ _         _         _____ _ _
-	 / ____| |       | |       / ____(_) |
-	| (___ | |_ _   _| | ___  | (___  _| |_   ___  ___
-	 \___ \| __| | | | |/ _ \  \___ \| | __| / _ \/ __|
-	 ____) | |_| |_| | |  __/  ____) | | |_ |  __/\__ \
-	|_____/ \__|\__, |_|\___| |_____/|_|\__(_)___||___/
-		     __/ |
-		    |___/
+          _____ _         _         _____ _ _              
+         / ____| |       | |       / ____(_) |             
+        | (___ | |_ _   _| | ___  | (___  _| |_   ___  ___ 
+         \___ \| __| | | | |/ _ \  \___ \| | __| / _ \/ __|
+         ____) | |_| |_| | |  __/  ____) | | |_ |  __/\__ \
+        |_____/ \__|\__, |_|\___| |_____/|_|\__(_)___||___/
+                     __/ |                                 
+                    |___/

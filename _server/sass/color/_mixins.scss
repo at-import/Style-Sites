@@ -16,67 +16,67 @@
   @if length($colours) > 0 {
     .color-guide {
       ul {
-	margin: 0;
-	padding: 0;
+        margin: 0;
+        padding: 0;
       }
 
       li {
-	list-style: none;
-	height: 3em;
-	position: relative;
+        list-style: none;
+        height: 3em;
+        position: relative;
 
-	@include grid-span(1, 1, $length, 0, $output: 'float');
+        @include grid-span(1, 1, $length, 0, $output: 'float');
 
-	&:nth-child(#{$length}n) {
-	  @include grid-span(1, ($length), $length, 0, $output: 'float');
-	  margin-right: 0;
-	}
+        &:nth-child(#{$length}n) {
+          @include grid-span(1, ($length), $length, 0, $output: 'float');
+          margin-right: 0;
+        }
 
-	&:before, &:after,
-	&:nth-child(#{$length}n):before,
-	&:nth-child(#{$length}n):after {
-	  position: absolute;
-	  height: 1.25em;
-	  width: 100%;
-	  @include box-sizing('border-box');
-	  margin: 0;
-	  padding: 0;
-	  left: 0;
-	  text-align: center;
-	}
+        &:before, &:after,
+        &:nth-child(#{$length}n):before,
+        &:nth-child(#{$length}n):after {
+          position: absolute;
+          height: 1.25em;
+          width: 100%;
+          @include box-sizing('border-box');
+          margin: 0;
+          padding: 0;
+          left: 0;
+          text-align: center;
+        }
 
-	&:before {
-	  top: .25em;
-	}
-	&:after {
-	  bottom: .25em;
-	}
+        &:before {
+          top: .25em;
+        }
+        &:after {
+          bottom: .25em;
+        }
 
-	@if $singleton == true {
-	  $i: 1;
-	  @each $colour in $colours {
-	    &:nth-child(#{$i}) {
-	      background-color: $colour;
-	      @include colour-name($colour, $i);
-	    }
-	    $i: $i+1;
-	  }
-	}
-	@else {
-	  $i: 1;
-	  @each $colour in $colours {
-	    $j: 1;
-	    @each $single in $colour {
-	      &:nth-child(#{$i}) {
-		background-color: $single;
-		@include colour-name($single, $j);
-	      }
-	      $j: $j+1;
-	      $i: $i+1;
-	    }
-	    $j: 1;
-	  }
-	}
+        @if $singleton == true {
+          $i: 1;
+          @each $colour in $colours {
+            &:nth-child(#{$i}) {
+              background-color: $colour;
+              @include colour-name($colour, $i);
+            }
+            $i: $i+1;
+          }
+        }
+        @else {
+          $i: 1;
+          @each $colour in $colours {
+            $j: 1;
+            @each $single in $colour {
+              &:nth-child(#{$i}) {
+                background-color: $single;
+                @include colour-name($single, $j);
+              }
+              $j: $j+1;
+              $i: $i+1;
+            }
+            $j: 1;
+          }
+        }
 
       }
     }
