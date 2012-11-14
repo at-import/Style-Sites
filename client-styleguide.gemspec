@@ -1,16 +1,16 @@
 # Replace extension with the name of your extension's .rb file
-require './setup/styleguide.rb'
+require './setup/client-styleguide.rb'
 
 Gem::Specification.new do |s|
   # Release Specific Information
   #  Replace Extension with the name you used in your extension.rb
   #   in the mdodule with version and date.
-  s.version = Styleguide::VERSION
-  s.date = Styleguide::DATE
+  s.version = Client_Styleguide::VERSION
+  s.date = Client_Styleguide::DATE
 
   # Gem Details
   # Replace "styleguide" with the name of your extension
-  s.name = "styleguide"
+  s.name = "client-styleguide"
   # Description of your extension
   s.description = %q{Style Guide for my client}
   # A summary of your Compass extension. Should be different than Description
