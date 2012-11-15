@@ -31,7 +31,8 @@ Come with me on this journey.
 9. [License](#license)
 
 ## Requirements and Installation
-Style Sites run through [Serve](http://get-serve.com). In addition to Serve, there are a handful of other gems you're going to need to install. The following line should install everything for you (from the command line):
+
+Style Sites run through [Serve](http://get-serve.com). In addition to Serve, there are a handful of other gems you're going to need to install. You have two ways of installing all of the requirements. If you are on a Mac, the easiest way is to launch the "Install Requirements" application. You will be prompted to type in your user password (you won't see anything when you type in your password, just trust it's there) and press enter. That'll install everything you need. If you're not on a Mac, or would like to do it the old fashioned way, the following line should install everything for you (from the command line):
 
 ```bash
 (sudo) gem install serve haml compass sass bundler toolkit compass-normalize sassy-buttons
@@ -41,7 +42,7 @@ I also highly suggest investing in either [LiveReload](http://livereload.com) or
 
 ## Starting Your Server
 
-After you've got everything installed, you are going to need to start the server to see the website from the terminal. Simply `cd` to your project, something like `cd /path/to/Style-Sites` and then run the following:
+After you've got everything installed, you are going to need to start the server to see the website from the terminal. Again, if you are on a Mac, the easiest way is to launch the "Start Server application". This will launch the Terminal application, start your server, and minimize the window so you can continue working. If you're not on a Mac, or want to do it the old fashioned way, simply `cd` to your project, something like `cd /path/to/Style-Sites` and then run the following:
 
 ```bash
 serve _server
