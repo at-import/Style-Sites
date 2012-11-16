@@ -51,10 +51,7 @@
 				<key>ActionParameters</key>
 				<dict>
 					<key>source</key>
-					<string>on run {input, parameters}		tell application "Finder"   		set sel to item 1 of (get selection)    	if class of sel is folder then        	set currentDir to sel as text    	else        	set currentDir to (container of sel) as text    	end if	end tell	tell application "Terminal"		set currentTab to do script "cd " &amp; (quoted form of POSIX path of currentDir)		do script "serve _server" in currentTab		set miniaturized of window 1 to true	end tell	
-	delay 1
-	open location "http://localhost:4000/"
-		return inputend run</string>
+					<string>on run {input, parameters}		tell application "Finder"   		set sel to item 1 of (get selection)    	if class of sel is folder then        	set currentDir to sel as text    	else        	set currentDir to (container of sel) as text    	end if	end tell	tell application "Terminal"		set currentTab to do script "cd " &amp; (quoted form of POSIX path of currentDir)		do script "serve _server" in currentTab		set miniaturized of window 1 to true	end tell		delay 3	open location "http://localhost:4000/"		return inputend run</string>
 				</dict>
 				<key>BundleIdentifier</key>
 				<string>com.apple.Automator.RunScript</string>
@@ -108,7 +105,7 @@ end run</string>
 				<key>isViewVisible</key>
 				<true/>
 				<key>location</key>
-				<string>409.500000:1596.000000</string>
+				<string>571.250000:550.000000</string>
 				<key>nibPath</key>
 				<string>/System/Library/Automator/Run AppleScript.action/Contents/Resources/English.lproj/main.nib</string>
 			</dict>
