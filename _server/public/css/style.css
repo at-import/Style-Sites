@@ -48,16 +48,25 @@ body {
   padding: .75em;
 }
 
-#header h1, #header h2, #header h3, #header h4, #header h5, #header h6 {
+#header h1, #header h2, #header h3, #header h4, #header h5, #header h6, #header .page-info {
   margin: 0;
   padding: 0;
   color: black;
+  background: none;
+  border: none;
+  vertical-align: baseline;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  text-shadow: none;
 }
 #header h1 {
   font-size: 2em;
+  font-weight: bold;
 }
 #header h2 {
   font-size: 1.5em;
+  font-weight: bold;
 }
 #header h4 {
   font-size: 1em;
@@ -267,33 +276,6 @@ body {
 }
 
 /* Style Guide */
-*,
-*:after,
-*:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-img, video {
-  max-width: 100%;
-  height: auto;
-}
-
-.content-wrapper, #client-id, #page-id, .text-examples, .graphic-examples, .colors ul, .images ul {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
-  *zoom: 1;
-}
-.content-wrapper:before, #client-id:before, #page-id:before, .text-examples:before, .graphic-examples:before, .colors ul:before, .images ul:before, .content-wrapper:after, #client-id:after, #page-id:after, .text-examples:after, .graphic-examples:after, .colors ul:after, .images ul:after {
-  content: "";
-  display: table;
-}
-.content-wrapper:after, #client-id:after, #page-id:after, .text-examples:after, .graphic-examples:after, .colors ul:after, .images ul:after {
-  clear: both;
-}
-
 /* normalize.css v2.0.1 | MIT License | git.io/normalize */
 /* normalize.css v2.0.1 | HTML5 Display Definitions | MIT License | git.io/normalize */
 article,
@@ -493,6 +475,33 @@ textarea {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+*,
+*:after,
+*:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+img, video {
+  max-width: 100%;
+  height: auto;
+}
+
+.content-wrapper, #client-id, #page-id, .text-examples, .graphic-examples, .colors ul, .images ul {
+  /* for IE 6/7 */
+  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
+  /* non-JS fallback */
+  *zoom: 1;
+}
+.content-wrapper:before, #client-id:before, #page-id:before, .text-examples:before, .graphic-examples:before, .colors ul:before, .images ul:before, .content-wrapper:after, #client-id:after, #page-id:after, .text-examples:after, .graphic-examples:after, .colors ul:after, .images ul:after {
+  content: "";
+  display: table;
+}
+.content-wrapper:after, #client-id:after, #page-id:after, .text-examples:after, .graphic-examples:after, .colors ul:after, .images ul:after {
+  clear: both;
 }
 
 h1 {
@@ -1080,234 +1089,6 @@ h6 {
 }
 
 /* Style Tile */
-*,
-*:after,
-*:before {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
-
-img, video {
-  max-width: 100%;
-  height: auto;
-}
-
-.content-wrapper, #client-id, #page-id, .text-examples, .graphic-examples, .colors ul, .images ul {
-  /* for IE 6/7 */
-  *zoom: expression(this.runtimeStyle.zoom="1", this.appendChild(document.createElement("br")).style.cssText="clear:both;font:0/0 serif");
-  /* non-JS fallback */
-  *zoom: 1;
-}
-.content-wrapper:before, #client-id:before, #page-id:before, .text-examples:before, .graphic-examples:before, .colors ul:before, .images ul:before, .content-wrapper:after, #client-id:after, #page-id:after, .text-examples:after, .graphic-examples:after, .colors ul:after, .images ul:after {
-  content: "";
-  display: table;
-}
-.content-wrapper:after, #client-id:after, #page-id:after, .text-examples:after, .graphic-examples:after, .colors ul:after, .images ul:after {
-  clear: both;
-}
-
-/* normalize.css v2.0.1 | MIT License | git.io/normalize */
-/* normalize.css v2.0.1 | HTML5 Display Definitions | MIT License | git.io/normalize */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
-section,
-summary {
-  display: block;
-}
-
-audio,
-canvas,
-video {
-  display: inline-block;
-}
-
-audio:not([controls]) {
-  display: none;
-  height: 0;
-}
-
-[hidden] {
-  display: none;
-}
-
-/* normalize.css v2.0.1 | Base | MIT License | git.io/normalize */
-html {
-  font-family: sans-serif;
-  -webkit-text-size-adjust: 100%;
-  -ms-text-size-adjust: 100%;
-}
-
-body {
-  margin: 0;
-}
-
-/* normalize.css v2.0.1 | Links | MIT License | git.io/normalize */
-a:focus {
-  outline: thin dotted;
-}
-
-a:active,
-a:hover {
-  outline: 0;
-}
-
-/* normalize.css v2.0.1 | Typography | MIT License | git.io/normalize */
-h1 {
-  font-size: 2em;
-}
-
-abbr[title] {
-  border-bottom: 1px dotted;
-}
-
-b,
-strong {
-  font-weight: bold;
-}
-
-dfn {
-  font-style: italic;
-}
-
-mark {
-  background: #ff0;
-  color: #000;
-}
-
-code,
-kbd,
-pre,
-samp {
-  font-family: monospace, serif;
-  font-size: 1em;
-}
-
-pre {
-  white-space: pre;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-q {
-  quotes: "\201C" "\201D" "\2018" "\2019";
-}
-
-small {
-  font-size: 80%;
-}
-
-sub,
-sup {
-  font-size: 75%;
-  line-height: 0;
-  position: relative;
-  vertical-align: baseline;
-}
-
-sup {
-  top: -0.5em;
-}
-
-sub {
-  bottom: -0.25em;
-}
-
-/* normalize.css v2.0.1 | Embedded Content | MIT License | git.io/normalize */
-img {
-  border: 0;
-}
-
-svg:not(:root) {
-  overflow: hidden;
-}
-
-/* normalize.css v2.0.1 | Figures | MIT License | git.io/normalize */
-figure {
-  margin: 0;
-}
-
-/* normalize.css v2.0.1 | Forms | MIT License | git.io/normalize */
-fieldset {
-  border: 1px solid #c0c0c0;
-  margin: 0 2px;
-  padding: 0.35em 0.625em 0.75em;
-}
-
-legend {
-  border: 0;
-  padding: 0;
-}
-
-button,
-input,
-select,
-textarea {
-  font-family: inherit;
-  font-size: 100%;
-  margin: 0;
-}
-
-button,
-input {
-  line-height: normal;
-}
-
-button,
-html input[type="button"],
-input[type="reset"],
-input[type="submit"] {
-  -webkit-appearance: button;
-  cursor: pointer;
-}
-
-button[disabled],
-input[disabled] {
-  cursor: default;
-}
-
-input[type="checkbox"],
-input[type="radio"] {
-  box-sizing: border-box;
-  padding: 0;
-}
-
-input[type="search"] {
-  -webkit-appearance: textfield;
-  -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
-  box-sizing: content-box;
-}
-
-input[type="search"]::-webkit-search-cancel-button,
-input[type="search"]::-webkit-search-decoration {
-  -webkit-appearance: none;
-}
-
-button::-moz-focus-inner,
-input::-moz-focus-inner {
-  border: 0;
-  padding: 0;
-}
-
-textarea {
-  overflow: auto;
-  vertical-align: top;
-}
-
-/* normalize.css v2.0.1 | Tables | MIT License | git.io/normalize */
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
 .colors li:nth-child(1) {
   background-color: #9f3f9f;
 }
