@@ -36,18 +36,25 @@ body {
 }
 
 #header {
-  h1, h2, h3, h4, h5, h6 {
+  h1, h2, h3, h4, h5, h6, .page-info {
     margin: 0;
     padding: 0;
     color: black;
+    background: none;
+    border: none;
+    vertical-align: baseline;
+    @include box-shadow(none);
+    @include text-shadow(none);
   }
 
   h1 {
     font-size: 2em;
+    font-weight: bold;
   }
 
   h2 {
     font-size: 1.5em;
+    font-weight: bold;
   }
 
   h4 {
