@@ -1,7 +1,22 @@
 Designer's QuickStart Guide
 ============================
 
-This is a quick start guide for designers unfamiliar with Git or Designing in Browser to get started using Style Sites.
+This is a quick start guide for designers unfamiliar with Git or Designing in Browser to get started using Style Sites. This document will guide you in installing and using Style Sites, as well as get you set up to version your styles using Git and point you in the direction you need to start learning HTML5/CSS and Sass. This guide will also help you get set up with a modern Front End development stack. If you're a designer, after reading this you'll be well on your way to designing for the web in the web!
+
+## Table of Contents
+
+1. [Requirements](https://github.com/Snugug/Style-Sites/blob/master/Designer's%20QuickStart%20Guide.md#requirements)
+2. [Getting Started](https://github.com/Snugug/Style-Sites/blob/master/Designer's%20QuickStart%20Guide.md#getting-started)
+	* [Learning HTML and CSS](https://github.com/Snugug/Style-Sites/blob/master/Designer's%20QuickStart%20Guide.md#learning-html-and-css)
+	* [Installing Style Site Requirements](https://github.com/Snugug/Style-Sites/blob/master/Designer's%20QuickStart%20Guide.md#installing-style-site-requirements)
+	* [LiveReload/Guard](https://github.com/Snugug/Style-Sites/blob/master/Designer's%20QuickStart%20Guide.md#livereloadguard)
+	* [Text Editor](https://github.com/Snugug/Style-Sites/blob/master/Designer's%20QuickStart%20Guide.md#text-editor)
+3. [Versioned Styles](https://github.com/Snugug/Style-Sites/blob/master/Designer's%20QuickStart%20Guide.md#versioned-styles)
+	* [Client Branches](https://github.com/Snugug/Style-Sites/blob/master/Designer's%20QuickStart%20Guide.md#client-branches)
+	* [ch-ch-ch-ch Changes](https://github.com/Snugug/Style-Sites/blob/master/Designer's%20QuickStart%20Guide.md#ch-ch-ch-ch-changes)
+4. [Working with Style Sites](https://github.com/Snugug/Style-Sites/blob/master/Designer's%20QuickStart%20Guide.md#working-with-style-sites)
+	* [Working Locally](https://github.com/Snugug/Style-Sites/blob/master/Designer's%20QuickStart%20Guide.md#working-locally)
+	* [Super Powering your CSS with Sass](https://github.com/Snugug/Style-Sites/blob/master/Designer's%20QuickStart%20Guide.md#super-powering-your-css-with-sass)
 
 ## Requirements
 
