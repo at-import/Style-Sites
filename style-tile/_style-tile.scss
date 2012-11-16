@@ -1,13 +1,11 @@
 //////////////////////////////
-// Import Style Guide's Globals
+// Build out your Possible Colours
+//
+// Everything from your Style Guide _base.scss are available
+//  including all of your colours.
 //////////////////////////////
-@import "../style-guide/global/base";
-
-//////////////////////////////
-// Import Color Guide Helper Mixins and Functions
-//////////////////////////////
-@import "../_server/sass/tile/functions";
-@import "../_server/sass/tile/mixins";
-
-// Example generation of possible colours. Replace with your colours.
 @include possible-colours(nth($purple, 2), nth($blue, 3), nth($green, 3), nth($orange, 3), nth($red, 5), nth($purple, 6));
+
+//////////////////////////////
+// Build out your Style Tile
+//////////////////////////////
