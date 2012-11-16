@@ -5,7 +5,11 @@
 @import "../../style-guide/style-guide";
 
 /* Color Guide */
+@import "color/functions";
+@import "color/mixins";
 @import "../../color-guide/colour-guide";
 
 /* Style Tile */
+@import "tile/functions";
+@import "tile/mixins";
 @import "../../style-tile/style-tile";
