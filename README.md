@@ -56,6 +56,8 @@ The best way to work with Style Sites is to have a branch or separate download f
 
 ## Setting Up Your Style Site
 
+Things inside folders that start with an underscore (so `_server` and `_compass`) contain advanced, backbone type stuff so you generally won't touch anything inside of them for 90% of the work you do. If you absolutely need to change the way one of the default pages works, you'd edit it in `_server`. When you're ready to turn everything into a Compass extension, you'll work in `_compass`, but that's about it.
+
 Once you have everything in place and you have your server running, setting up your style site is very easy. Inside the `setup` directory, you will find the following files, in order of importance:
 
 * client.haml
