@@ -20,10 +20,11 @@
     %p.serif Donec ullamcorper nulla non metus auctor fringilla. Nullam quis risus eget urna mollis ornare vel eu leo. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod.
     %p.serif Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Cras mattis consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam id dolor id nibh ultricies vehicula ut id elit. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam eget risus varius blandit sit amet non magna.
   .buttons.group
-    - @buttons.each_with_index do |button, i|
-      %li
-        %a{:class => button, :href => '#'}
-          Button #{i}
+    %ul
+      - @buttons.each_with_index do |button, i|
+        %li
+          %a{:class => button, :href => '#'}
+            Button #{i}
 %article.graphic-examples
   .colors.group
     %h2 Possible Colors
