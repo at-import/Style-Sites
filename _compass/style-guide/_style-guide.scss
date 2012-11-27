@@ -1,0 +1,37 @@
+//////////////////////////////
+// Import Global Goodies
+//////////////////////////////
+@import "global/base";
+
+//////////////////////////////
+// Example Stle Guide goodies
+//////////////////////////////
+
+// Loop over all Header elements and make them progressively lighter based on the colours in our $black colour.
+@for $i from 1 through 6 {
+  h#{$i} {
+    color: nth($black, $i);
+  }
+}
+
+// Example creating a basic Sassy Button
+.call-to-action {
+  @include sassy-button("shiny", 1.25em, 1em, nth($purple, 2));
+  text-decoration: none;
+}
+
+// Example creting an advanced Sassy Button that changes colour with attached class
+.big-button {
+  position: relative;
+  text-decoration: none;
+
+  @include sassy-button-structure(.25em, 1.25em);
+
+  @include sassy-button-gradient("matte", nth($blue, 3), $text-color: nth($black, 1), $text-style: "inset");
+  @include sassy-button-style("push", nth($blue, 3));
+
+  &.red {
+    @include sassy-button-gradient("matte", nth($red, 3), $text-color: nth($black, 1), $text-style: "inset");
+    @include sassy-button-style("push", nth($red, 3));
+  }
+}

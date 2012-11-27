@@ -1,5 +1,5 @@
 # Replace extension with the name of your extension's .rb file
-require './lib/styleguide.rb'
+require './lib/client-styleguide.rb'
 
 Gem::Specification.new do |s|
   # Release Specific Information
@@ -35,7 +35,7 @@ Gem::Specification.new do |s|
   # s.files += ["CHANGELOG.md"]
 
   # Library Files
-  s.files += Dir.glob("lib/styleguide.rb")
+  s.files += Dir.glob("lib/client-styleguide.rb")
   s.files += Dir.glob("style-guide/**/*.*")
   s.files += Dir.glob("templates/**/*.*")
 
