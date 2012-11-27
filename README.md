@@ -61,7 +61,6 @@ Once you have everything in place and you have your server running, setting up y
 * client.haml
 * webfonts.haml
 * sections.haml
-* client-styleguide.rb
 * javascript.haml
 * development.haml
 * _page-setup.scss
@@ -97,10 +96,6 @@ You would replace `false` in `@googleFonts` with `"'Offside::latin'"`. Again, be
 ### sections.haml
 
 This section allows you to choose what sections of you'd like in your Style Site. You can rename, redirect, or create new sections with ease. Creating a new section is easy, simply place the haml file into the `custom` folder; there are two example folders in there, a Drupal UI and a General UI folder with corresponding haml files that you can use as guidance. Once you've created your custom haml files, add them to the `@sections` variable.
-
-### client-styleguide.rb
-
-This file is used for when you're ready to turn your built style guide into a Compass extension, this tells Compass the name of your Compass extension  as well as what other gems are required. You generally won't need to touch anything in this file except for changing the name of the file to the actual name of your client, and changing the two instances of Client Styleguide, one `client-styleguide` on line 16 and one `Client_Styleguide` on line 24. If you create new versions of your style guide, be sure to update Version and Date accordingly before building a new gem.
 
 ### javascript.haml
 
@@ -142,20 +137,21 @@ If you've built out your Style Guide before your Style Tile, there isn't much th
 
 ## Your Compass Extension
 
-Once you're done with your Style Site, it's drop dead easy to turn it into a Compass Extension to be used on any project you wish! 
+Once you're done with your Style Site, it's drop dead easy to turn it into a Compass Extension to be used on any project you wish! Simply go into the `_compass` folder and do the following:
 
-1. Rename `client-styleguide.gemspec` the same name you used for `setup/client-styleguide.rb`
-2. Open `client-styleguide.gemspec`
-3. Make sure that `require '/.setup/client-styleguide.rb` is changed to your renamed `client-styleguide.rb`
-4. Make sure that `Client_Styleguide` is changed to what you used in `client-styleguide` for `s.version` and `s.date`
-5. Change the value of `s.name` to match the name of the file
-6. Edit `s.description`, `s.summary`, `s.authors`, `s.email`, and `s.homepage` respectively.
+1. Rename `lib/client-styleguide.rb` to the name of your client, and change the two instances of Client Styleguide inside the file, one `client-styleguide` on line 16 and one `Client_Styleguide` on line 24 to the same. If you create new versions of your style guide, be sure to update Version and Date accordingly before building a new gem.
+2. Rename `client-styleguide.gemspec` the same name you used for `lib/client-styleguide.rb`
+3. Open `client-styleguide.gemspec`
+4. Make sure that `require '/lib/client-styleguide.rb` is changed to your renamed `client-styleguide.rb`
+5. Make sure that `Client_Styleguide` is changed to what you used in `client-styleguide` for `s.version` and `s.date`
+6. Change the value of `s.name` to match the name of the file
+7. Edit `s.description`, `s.summary`, `s.authors`, `s.email`, and `s.homepage` respectively.
 
-Once you're done with the edits, save, and in your command line, run `gem build client-styleguide.gemspec` (using the name of your renamed gemspec) and you've got a working Compass extension! This will create a gem called `client-styleguide-1.0.gem` (the 1.0 is the version number from `setup/client-styleguide.rb`, and the `client-styleguide` will actually be the name you renamed everything).
+Once you're done with the edits, save, and in your command line, run `gem build client-styleguide.gemspec` (using the name of your renamed gemspec) and you've got a working Compass extension! This will create a gem called `client-styleguide-1.0.gem` (the 1.0 is the version number from `lib/client-styleguide.rb`, and the `client-styleguide` will actually be the name you renamed everything).
 
 Now comes the hard part, figuring out how to distribute your Style Guide. If you're OK with it being out in the open, make sure you've got a [RubyGems](http://rubygems.org/) account, then type `gem push client-styleguide-1.0.gem` (substituting name and version as appropriate). If you distribute this way, then installing and updating the style guide is the exact same as any other Compass Extension. A simple `gem install client-styleguide` will do. If you don't want it out in the open, you can email or self-serve the gem yourself, the only difference becomes `gem update` will no longer update the gem if you push an update. Users will then need to download the gem and, from the directory they've downloaded it to, run `gem install client-styleguide-1.0.gem` to install the extension.
 
-In either case, it's easy to use. Simply add `require 'client-styleguide'` in your `config.rb` file and add `@import "style-guide";` to your Sass file, and you're set (no trailing semicolon if you're using SASS syntax instead of SCSS syntax). It's important to note that you shouldn't use two style guides generated from this system in the same project, as their `@import` will conflict I believe.
+In either case, it's easy to use. Simply add `require 'client-styleguide'` in your `config.rb` file and add `@import "style-guide";` to your Sass file, and you're set (no trailing semicolon if you're using SASS syntax instead of SCSS syntax). It's important to note that you shouldn't use two style guides generated from this system in the same project, as their `@import` will conflict I believe. You can bring your images and JavaScript in as well. From the command line, run `compass install client-styleguide`. If you're creating a new project, you can do the whole thing in one go! Simply type `compass create <my_project> -r client-styleguide` to just require the style guide and do the `@import` yourself, or `compass create <my_project> -r client-styleguide --using client-styleguide` to create a new project with everything.
 
 ***That's It! Have Fun!***
 
