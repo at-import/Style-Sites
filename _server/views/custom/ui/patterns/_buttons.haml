@@ -1,0 +1,7 @@
+%article#buttons.element
+  %h2.element-title Buttons
+  %ul.buttons
+    - @buttons.each_with_index do |button, i|
+      %li
+        %a{:class => button, :href => '#'}
+          Button #{i}

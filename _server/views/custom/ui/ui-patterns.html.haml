@@ -5,12 +5,6 @@
 
 %section#simple-patterns.element-group
   %h1.section-title Common Patterns
-  = render :template => "/custom/drupal/patterns/_messages.haml"
-  = render :template => "/custom/drupal/patterns/_pager.haml"
-
-%section#buttons.element-group
-  %h1.section-title Buttons!
-  - @buttons.each_with_index do |button, i|
-    %li
-      %a{:class => button, :href => '#'}
-        Button #{i}
+  = render :template => "../drupal/patterns/_messages.haml"
+  = render :template => "../drupal/patterns/_pager.haml"
+  = render :template => "patterns/_buttons.haml"
